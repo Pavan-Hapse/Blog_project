@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
-post = [
+posts = [
 
     {
         'Author' : 'Pavan Hapse',
@@ -20,10 +20,11 @@ post = [
 ]
 
 
-
-
 def Home(request):
-    return render(request, 'Blog_home.html')
+    context = {
+        'posts' : 'posts'
+    }
+    return render(request, 'Blog_home.html', context)
 
 def About(request):
     return HttpResponse("<h1>Blog About</h1>")

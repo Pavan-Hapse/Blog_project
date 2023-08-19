@@ -20,8 +20,56 @@
 
 </head>
 <body>
-        <div class=" container ">
-            {% block content %}{% endblock %}
+        <header class="sit-header">
+
+           <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
+
+              <div class="container">
+                 <a class="navbar-brand mr-4" href="/">Django Blog</a>
+                 <button class="navbar-toggler" type="button" data-toggle="collapse">
+                    <span class="navbar-toggler-icon"></span>
+                 </button>
+
+                 <div class="collapse navbar-collapse" id="navbarToggle">
+                   <div class="navbar-nav mr-auto">
+                      <a class="nav-item nav-link" href="/">Home</a>
+                      <a class="nav-item nav-link" href="/">About</a>
+                   </div>
+
+                   <div class="navbar-nav">
+                      <a class="nav-item nav-link" href="/">Login</a>
+                      <a class="nav-item nav-link" href="/">Register</a>
+                   </div>
+
+                 </div>
+
+              </div>
+
+           </nav>
+
+        </header>
+        <main role="main" class="container">
+
+            <div class="row">
+              <div class="col-md-8">
+                {% block content %}{% endblock %}
+              </div>
+
+              <div class="col-md-4">
+                 <div class="content-section">
+                    <h3>Our Slider</h3>
+                    <p class="tex-muted"> You can put my information here you'd like my profile</p>
+                      <ul class="list-group">
+                        <li class="list-group-item list-group-item-light">Latest Post</li>
+                        <li class="list-group-item list-group-item-light">Announcement</li>
+                        <li class="list-group-item list-group-item-light">Calenders</li>
+                        <li class="list-group-item list-group-item-light">Etc</li>
+                      </ul>
+                    </div>
+                 </div>
+              </div>
+        </main>
+
         </div>
          <!-- Optional JavaScript -->
          <!-- jQuery first, then Popper.js, then Bootstrap JS -->
